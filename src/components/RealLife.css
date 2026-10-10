@@ -1,0 +1,76 @@
+.real-life {
+  position: relative;
+
+  padding: 100px 0;
+
+  color: white;
+
+  /*
+    TODO: background photo.
+    The original stylesheet pointed at images/truck-road.jpg, a file that
+    was never added, so no photo has ever shown here. Once you have one,
+    put it in src/assets and add:
+
+      background-image: url("../assets/truck-road.jpg");
+  */
+
+  background-size: cover;
+  background-position: center;
+}
+
+.real-life-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(13, 35, 49, 0.92),
+    rgba(13, 35, 49, 0.55)
+  );
+}
+
+.real-life-content {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 70px;
+
+  align-items: center;
+}
+
+.real-life h2 {
+  margin: 10px 0 20px;
+
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
+  line-height: 1;
+}
+
+.locations {
+  font-size: 1.15rem;
+}
+
+.travel-message {
+  padding: 30px;
+
+  background: var(--green);
+
+  transform: rotate(-2deg);
+
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+
+  text-align: center;
+}
+
+.travel-message span,
+.travel-message strong {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .real-life-content {
+    grid-template-columns: 1fr;
+  }
+}

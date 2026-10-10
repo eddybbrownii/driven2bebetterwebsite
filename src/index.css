@@ -1,0 +1,85 @@
+/* =====================================
+  DRIVEN 2 BE BETTER
+  Global styles: colors, resets and the
+  few classes shared by several sections.
+  Each component has its own .css file
+  next to it in src/components.
+===================================== */
+
+:root {
+  --navy: #123247;
+  --green: #3f6f37;
+  --green-dark: #31582c;
+  --cream: #f5f0e7;
+  --paper: #faf8f3;
+  --white: #ffffff;
+  --text: #18252d;
+  --muted: #647078;
+  --gold: #c49a45;
+
+  --shadow: 0 18px 45px rgba(20, 35, 45, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: min(1180px, 90%);
+  margin: auto;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--green);
+}
+
+.light {
+  color: #d9e7d3;
+}
+
+/* Top banner used by inner pages (Videos, Not Found) */
+
+.page-intro {
+  padding: 70px 0 40px;
+  background: var(--cream);
+}
+
+.page-intro h1 {
+  margin: 10px 0 20px;
+
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+
+  color: var(--navy);
+}
+
+.page-intro h1 span {
+  display: block;
+
+  margin-top: 10px;
+
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--green);
+}

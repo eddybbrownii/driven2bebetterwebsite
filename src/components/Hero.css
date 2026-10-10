@@ -1,0 +1,161 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 720px;
+  padding: 75px 0 90px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(247, 243, 235, 0.97) 0%,
+    rgba(247, 243, 235, 0.94) 55%,
+    rgba(247, 243, 235, 0.86) 100%
+  );
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 5;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.85fr;
+  gap: 90px;
+
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 650px;
+}
+
+.hero h1 {
+  margin: 10px 0 25px;
+
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+
+  color: var(--navy);
+}
+
+.hero h1 span {
+  display: block;
+
+  margin-top: 12px;
+
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  color: var(--green);
+}
+
+.hero-copy h2 {
+  max-width: 550px;
+  font-size: 1.25rem;
+}
+
+.lead {
+  max-width: 610px;
+  font-size: 1.05rem;
+}
+
+.personal-story {
+  margin: 28px 0;
+  padding-left: 20px;
+
+  border-left: 4px solid var(--green);
+}
+
+.script-line {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  color: var(--navy);
+}
+
+/* ==============================
+  COLLAGE
+============================== */
+
+.collage {
+  position: absolute;
+  z-index: 1;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.scale {
+  width: 190px;
+  left: -55px;
+  top: 210px;
+
+  transform: rotate(-8deg);
+}
+
+.tape {
+  width: 230px;
+  left: 15px;
+  bottom: 20px;
+
+  transform: rotate(8deg);
+}
+
+.journal {
+  width: 220px;
+  right: -80px;
+  bottom: -40px;
+
+  transform: rotate(7deg);
+}
+
+.travel-photo {
+  width: 165px;
+
+  border: 8px solid white;
+  box-shadow: var(--shadow);
+}
+
+.truck-photo {
+  top: 25px;
+  left: 48%;
+
+  transform: rotate(-3deg);
+}
+
+.plane-photo {
+  top: 45px;
+  left: 61%;
+
+  transform: rotate(5deg);
+}
+
+.bus-photo {
+  top: 105px;
+  left: 73%;
+
+  transform: rotate(9deg);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding-top: 50px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
+
+  .travel-photo {
+    opacity: 0.16;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+}
